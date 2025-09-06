@@ -70,7 +70,7 @@ export default function CodexWireframePolysExample() {
     const den = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
     if (Math.abs(den) < EPS) return null; // parallel or nearly
 
-    const t = ((x1 - x3) * (y3 - y4) - (y1 - y3) * (c[0] - c[0])) / den;
+    const t = ((x1 - x3) * (y3 - y4) - (y1 - y3) * (x3 - x4)) / den;
     const u = ((x1 - x3) * (y1 - y2) - (y1 - y3) * (x1 - x2)) / den;
     if (t < -EPS || t > 1 + EPS || u < -EPS || u > 1 + EPS) return null;
 
